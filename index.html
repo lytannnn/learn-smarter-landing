@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordWise - Learn English Smarter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Loading WordWise...</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Background Elements -->
+        <div class="hero-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <!-- Logo -->
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>WordWise</span>
+            </div>
+
+            <!-- Headlines -->
+            <h1 class="hero-title">
+                Learn English
+                <span class="gradient-text">Smarter</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                WordWise is launching soon – sign up to be the first to know.
+            </p>
+
+            <!-- CTA Button -->
+            <button class="cta-button" onclick="openModal()">
+                <i class="fas fa-envelope"></i>
+                Notify Me
+            </button>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About WordWise</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        WordWise is an upcoming web and mobile app that helps learners improve their English vocabulary
+                        through daily challenges, flashcards, quizzes, and real-life usage examples. Designed for all levels,
+                        from beginners to advanced.
+                    </p>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Vocabulary Words</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Interactive Lessons</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Personalized Learning</h3>
+                        <p>Adaptive content based on your progress</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Daily Challenges</h3>
+                        <p>Keep learning with fun daily tasks</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Community</h3>
+                        <p>Learn together with other students</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Real Examples</h3>
+                        <p>Learn with real-world usage examples</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Stay Connected</h2>
+                <p>Have questions or want to share feedback? We'd love to hear from you!</p>
+            </div>
+
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-comment"></i>
+                        <textarea id="message" name="message" placeholder="Your Message (Optional)" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social">
+        <div class="container">
+            <h2>Follow Our Journey</h2>
+            <p>Stay updated with our latest news and behind-the-scenes content</p>
+
+            <div class="social-links">
+                <a href="#" class="social-link facebook" aria-label="Follow us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link instagram" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link linkedin" aria-label="Connect with us on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <i class="fas fa-book-open"></i>
+                <span>WordWise</span>
+            </div>
+            <p>&copy; <span id="currentYear"></span> WordWise. Coming Soon. Built with ❤️ for English learners worldwide.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="notifyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Get Early Access</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <form id="modalForm" class="modal-form">
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="modalName" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="modalEmail" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-comment"></i>
+                    <textarea id="modalMessage" name="message" placeholder="Any message for us? (Optional)" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Join the Waitlist</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
