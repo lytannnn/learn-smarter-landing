@@ -28,6 +28,44 @@ WordWise/\
 
 1. **Clone or download the project.**
 
+📄 .env File
+------------
+
+Create a `.env` file in the root of your project (same level as `mail.php`). It stores sensitive email configuration values. **Do not commit this file to Git.**
+
+**Example `.env`:**
+
+ini
+
+`MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=your_email@gmail.com
+MAIL_PASSWORD=your_app_password
+MAIL_FROM_NAME=WordWise
+MAIL_FROM_EMAIL=your_email@gmail.com`
+
+> 💡 Use an **App Password** from Gmail (not your regular Gmail password) if 2FA is enabled.
+
+* * * * *
+
+🚫 .gitignore
+-------------
+
+Ensure your `.gitignore` contains:
+
+bash
+
+CopyEdit
+
+`.env`
+
+* * * * *
+
+📨 Test Email
+-------------
+
+Make a test submission from the form on the frontend and monitor the response (JSON success/error message). Emails will be sent to the address defined in `MAIL_USERNAME`.
+
 2. **Serve with a local PHP server** (e.g., using VS Code Live Server with PHP or XAMPP):
    ```bash
    php -S localhost:8000
@@ -75,16 +113,7 @@ WordWise/\
 
 -   If deploying, protect backend against abuse (e.g., rate limiting, CAPTCHA).
 
-✅ To-Do (Suggestions)
----------------------
 
--   Add reCAPTCHA to prevent spam
-
--   Store submissions in a database instead of CSV
-
--   Integrate Mailchimp or ConvertKit for email list management
-
--   Build out the full app post-launch
 
 📄 License
 ----------
